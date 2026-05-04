@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Johan Kepler | Excelencia Educativa</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kepler: {
+                            red: '#9D2235',
+                            gold: '#FFCD00',
+                            aqua: '#e0f2f1',
+                            black: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade { animation: fadeIn 0.8s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-kepler-aqua font-sans text-slate-900 antialiased">
+
+<!-- NAVBAR -->
+<nav class="bg-white border-b-4 border-kepler-red px-6 py-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Logo Kepler" class="h-12">
+            <span class="font-black text-xl text-kepler-red hidden md:block">JOHAN KEPLER</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-wider">
+            <a href="#inicio" class="hover:text-kepler-red transition-colors">Inicio</a>
+            <a href="#admisiones" class="hover:text-kepler-red transition-colors">Admisiones</a>
+            <a href="https://sirai.example.com" class="bg-kepler-red text-white px-4 py-2 rounded shadow-sm hover:bg-black transition-all">Portal SIRAI</a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menu-btn" class="md:hidden text-kepler-red p-2 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col gap-4 pb-4 border-t pt-4">
+        <a href="#inicio" class="font-bold p-2 hover:bg-slate-50">Inicio</a>
+        <a href="#admisiones" class="font-bold p-2 hover:bg-slate-50">Admisiones</a>
+        <a href="#" class="font-bold p-2 text-kepler-red">Portal SIRAI</a>
+    </div>
+</nav>
+
+<main>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative h-[85vh] flex items-center bg-kepler-black overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/fachada.jpg" alt="Fachada" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-r from-kepler-black via-transparent to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl animate-fade">
+                <h1 class="text-6xl md:text-8xl font-black text-white leading-tight mb-6">
+                    TU FUTURO ESTÁ EN <br>
+                    <span class="text-kepler-gold italic">TUS MANOS</span>
+                </h1>
+                <p class="text-xl text-slate-200 mb-8 font-medium max-w-xl">
+                    Excelencia académica y formación integral con tecnología de vanguardia en Soyapango.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-kepler-red text-white px-10 py-4 rounded-md font-black uppercase shadow-lg hover:scale-105 transition-all">
+                        Admisiones 2026
+                    </button>
+                    <button class="bg-white text-kepler-black px-10 py-4 rounded-md font-black uppercase shadow-lg hover:bg-kepler-gold transition-all">
+                        Ver Programas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIDAD SECTION -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-black text-kepler-red mb-8 uppercase tracking-tighter">Nuestra Identidad</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        En el <strong>Colegio Johan Kepler</strong>, no solo enseñamos; transformamos el potencial en éxito.
+                        Con un enfoque en ciencia y valores, preparamos a la próxima generación de líderes.
+                    </p>
+                    <div class="bg-kepler-aqua p-6 border-l-8 border-kepler-gold">
+                        <p class="font-bold text-xl italic text-slate-800">"Hacia la cima a través del conocimiento."</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-kepler-gold rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    <div class="bg-slate-100 rounded-3xl p-8 shadow-2xl border border-slate-200">
+                        <h3 class="text-2xl font-black mb-6 border-b pb-2">Oferta Académica</h3>
+                        <ul class="space-y-4 font-bold text-slate-700">
+                            <li class="flex items-center gap-3"><span class="text-kepler-red text-2xl">✓</span> Educación Básica</li>
+                            <li class="flex items-center gap-3"><span class="text-kepler-red text-2xl">✓</span> Bachillerato General</li>
+                            <li class="flex items-center gap-3"><span class="text-kepler-red text-2xl">✓</span> Bachillerato Técnico</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-kepler-black text-white py-16 border-t-8 border-kepler-red">
+    <div class="container mx-auto px-6 text-center">
+        <img src="assets/logo.png" alt="Logo" class="h-20 mx-auto mb-8 brightness-200 grayscale">
+        <div class="flex justify-center gap-8 mb-8 text-slate-400 font-bold uppercase text-sm">
+            <a href="#" class="hover:text-white">Privacidad</a>
+            <a href="#" class="hover:text-white">Contacto</a>
+            <a href="#" class="hover:text-white">Ubicación</a>
+        </div>
+        <p class="text-slate-500 font-medium">
+            &copy; <span id="year"></span> Colegio Johan Kepler. Soyapango, El Salvador.
+        </p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT MANUAL -->
+<script>
+    // Lógica del Menú Móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const isOpen = !mobileMenu.classList.contains('hidden');
+
+        // Cambiar icono de hamburguesa a X
+        menuIcon.setAttribute('d', isOpen
+            ? "M6 18L18 6M6 6l12 12"
+            : "M4 6h16M4 12h16m-7 6h7"
+        );
+    });
+
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
